@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:400,600');
+
+:root {
+  --darkGreen: rgb(212, 212, 212);
+  --lightGreen: #888;
+  --darkTan: rgb(83, 82, 83);
+  --mainFont: 'Dosis';
+  --mainWeight: 400;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*-------------------- BEGIN MOBILE SIZING --------------------*/
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: auto;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  order: 1;
+  //background-color: var(--lightGreen);
+}
+
+nav > div {
+  display: flex;
+  flex-direction: column;
+}
+
+nav > div > svg {
+  fill: var(--darkTan);
+  width: 90%;
+  align-self: center;
+}
+
+nav > .menuItems {
+  display: none;
+}
+
+.center {
+  align-self: center;
+}
+
+.mainReel {
+  width: 100vw;
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: gray;
+}
+
+.mainReel > .bgImg {
+  display: none;
+}
+
+.viewOptions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  width: 100vw;
+  order: 3;
+}
+
+.viewOptions > div > a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transition: 0.4s ease;
+  padding: 2vh;
+}
+
+.viewOptions > div > a > svg {
+  transition: 0.4s ease;
+  fill: white;
+}
+
+.viewOptions > div:hover {
+  transition: 0.4s ease;
+  cursor: pointer;
+  background-size: 150%;
+}
+
+.viewOptions > div:hover > a > svg {
+  transition: 0.4s ease;
+  fill: var(--darkTan);
+}
+
+.viewOptions > div > a > svg > rect {
+  transition: 0.4s ease;
+  stroke: rgba(0,0,0,0.5);
+}
+
+.viewOptions > div > p {
+  text-transform: uppercase;
+  color: white;
+  font-size: 90%;
+  font-family: var(--mainFont);
+  font-weight: var(--mainWeight);
+}
+
+.viewOptions > .Artwork{
+  order: 1;
+  grid-column: 1 / 2;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../imgs/art.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.viewOptions > .Artwork > a{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: inherit;
+    justify-content: space-between;
+}
+
+.viewOptions > .Programming{
+  order: 2;
+  grid-column: 2 / -1;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../imgs/code.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.viewOptions > .Programming > a{
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.viewOptions > .Resume {
+  order: 3;
+  grid-column: 1 / -1;
+  grid-row: 2 / -1;
+  flex-direction: row;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../imgs/interview.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+}
+
+.viewOptions > .Resume > a{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.aboutJon {
+  order: 4;
+}
+
+.contactGIT {
+  order: 5;
+}
+
+.divider {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.divider > p {
+  font-size: 200%;
+  color: rgb(12, 175, 227);
+}
+
+.divider-1 {
+  order: 4;
+}
+
+.contactGIT > .socialMedia {
+  order: 8;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactGIT > .socialMedia > div > a:first-of-type {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.contactGIT > .socialMedia > div:nth-child(2) {
+  margin: 7vw;
+}
+
+.contactGIT > .socialMedia > div > a:last-of-type {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.contactGIT > .socialMedia > div > a > svg {
+  width: calc(100vw / 5);
+  align-self: center;
+}
+
+.contactGIT > .socialMedia > div > a > svg > g > g {
+  fill: #888;
+  transition: 0.4s ease;
+}
+
+.gIT {
+  order: 5;
+  font-family: var(--mainFont);
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+}
+
+.contactGIT > .socialMedia > div > a > svg:hover > g > g {
+  fill: rgb(27, 143, 90);
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+.contactGIT > .divider-2 {
+  order: 8;
+}
+
+.contact {
+  order: 9;
+  padding: 2vh;
+}
+/*-------------------- END MOBILE SIZING --------------------*/
+/*-------------------- BEGIN TABLET SIZING --------------------*/
+@media screen and (min-width: 700px) {
+  nav {
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vh;
+  }
+
+  nav > .logo {
+    width: 35%;
+    align-self: flex-start;
+  }
+
+  nav > .logo > svg {
+    width: 100%;
+  }
+
+  nav > .menuItems {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .mainReel {
+    height: 50vh;
+  }
+
+  .mainReel > div:nth-child(2) {
+    display: none;
+  }
+
+  .mainReel > .bgImg {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: inherit;
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../imgs/four.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mainReel > .bgImg > .middleCont {
+    width: 80%;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mainReel > .bgImg > .middleCont > p {
+    width: 50%;
+    text-align: justify;
+    color: white;
+  }
+
+  .aboutJon {
+    display: none;
+  }
+
+  .viewOptions {
+    display: none;
+  }
+
+  .gIT {
+    order: 3;
+    margin-top: 2vh;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .gIT {
+    font-size: 200%;
+  }
+
+  .contactGIT {
+    display: flex;
+    order: 4;
+    width: 75vw;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .contactGIT > .socialMedia {
+    flex-direction: column;
+    width: 10vw;
+  }
+
+  .contactGIT > .socialMedia > div:nth-child(2) {
+    margin: 2vw;
+  }
+
+  .contactGIT > .socialMedia > div > a > svg {
+    width: calc(100vw / 12);
+  }
+
+  .contactGIT > .contact {
+    width: 75vw;
+  }
+}
+/*-------------------- END TABLET SIZING --------------------*/
+/*-------------------- BEGIN DESKTOP SIZING --------------------*/
+@media screen and (min-width: 1024px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .top {
+    background: #111;
+    width: auto;
+    height: auto;
+  }
+
+  .top > nav {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .top > nav > .logo {
+    width: 25%;
+    align-self: center;
+  }
+
+  nav > .logo > svg {
+    fill: white;
+    width: 75%;
+  }
+
+  nav > .menuItems{
+    display: none;
+  }
+
+  nav > .menuItems > a {
+    color: white;
+  }
+
+  nav > .menuItems > a:hover {
+    text-decoration: none;
+    font-style: italic;
+  }
+
+  .mainReel {
+    height: 92vh;
+  }
+
+  .mainReel > .bgImg {
+    flex-direction: column;
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../imgs/four.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .mainReel > .bgImg > .middleCont {
+    width: 50%;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .gIT {
+    order: 3;
+    margin-top: 2vh;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .contactGIT {
+    display: flex;
+    order: 4;
+    width: 100vw;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .contactGIT > .socialMedia {
+    flex-direction: column;
+    width: 2vw;
+  }
+
+  .contactGIT > .socialMedia > div:nth-child(2) {
+    margin: 2vw;
+  }
+
+  .contactGIT > .socialMedia > div > a > svg {
+    width: calc(100vw / 24);
+  }
+}
+/*-------------------- END DESKTOP SIZING --------------------*/
+@media screen and (min-width: 1439px) {
+  .contactGIT {
+    width: 50vw;
+    justify-content: space-between;
+  }
+
+  .contactGIT > .socialMedia {
+    margin: 5vw;
+  }
+}

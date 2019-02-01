@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,700');
+
+:root {
+  --darkGreen: rgb(212, 212, 212);
+  --lightGreen: #888;
+  --darkTan: rgb(83, 82, 83);
+  --mainFont: 'Titillium Web';
+  --mainWeight: 400;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*-------------------- BEGIN MOBILE SIZING --------------------*/
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.greeting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mainFont);
+  padding-top: 2vh;
+  width: 100%;
+  padding-bottom: 2vh;
+  border-bottom: 1px solid rgb(191, 191, 191);
+}
+
+div > p {
+  font-size: 150%;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.greeting > p{
+  font-size: 175%;
+}
+
+div > p > span {
+  font-weight: 700;
+}
+
+div > .header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-bottom: 2vw;
+  align-items: center;
+  justify-content: center;
+}
+
+div > .header > .divider{
+  display: none;
+}
+
+.stillWorks {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2vw;
+  width: 100%;
+}
+
+.stillWorks > .mosaicGrid {
+  width: 100%;
+  display: grid;
+  padding-bottom: 2vw;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: minmax(150px, auto);
+  grid-gap: 10px;
+}
+
+.mosaicGrid > div {
+  background: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mosaicGrid > .one{
+  grid-column: 1 / 7;
+  grid-row: 1 / 30;
+  background-image: url('../imgs/one.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mosaicGrid > .two{
+  grid-column: 1 / 7;
+  grid-row: 30 / 60;
+  background-image: url('../imgs/two.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mosaicGrid > .three{
+  grid-column: 1 / 7;
+  grid-row: 60 / 90;
+  background-image: url('../imgs/three.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mosaicGrid > .four{
+  grid-column: 1 / 7;
+  grid-row: 90 / 120;
+  background-image: url('../imgs/four.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mosaicGrid > .five{
+  grid-column: 1 / 7;
+  grid-row: 120 / 150;
+  background-image: url('../imgs/five.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mosaicGrid > .six{
+  grid-column: 1 / 7;
+  grid-row: 150 / 180;
+  background-image: url('../imgs/six.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.mosaicGrid > .seven{
+  grid-column: 1 / 7;
+  grid-row: 180 / 210;
+  background-image: url('../imgs/seven.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.mosaicGrid > .eight{
+  grid-column: 1 / 7;
+  grid-row: 210 / 240;
+  background-image: url('../imgs/eight.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.mosaicGrid > .nine{
+  grid-column: 1 / 7;
+  grid-row: 240 / 270;
+  background-image: url('../imgs/nine.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.vidEmbeds {
+  align-self: flex-start;
+  padding: 2vw;
+  width: 100%;
+}
+
+.vidEmbeds > .header > .divider{
+  margin-right: 2vw;
+  margin-left: 0vw;
+}
+
+.vidEmbeds > .header > p{
+  order: 2;
+}
+
+.vidEmbeds > .animProj{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/*-------------------- END MOBILE SIZING --------------------*/
+/*-------------------- BEGIN TABLET SIZING --------------------*/
+@media screen and (min-width: 724px){
+.mosaicGrid > .one{
+  grid-column: 1 / 4;
+  grid-row: 1 / 30;
+}
+
+.mosaicGrid > .two{
+  grid-column: 4 / 7;
+  grid-row: 1 / 10;
+}
+
+.mosaicGrid > .three{
+  grid-column: 1 / 4;
+  grid-row: 30 / 60;
+}
+
+.mosaicGrid > .four{
+  grid-column: 1 / 5;
+  grid-row: 60 / 90;
+}
+
+.mosaicGrid > .five{
+  grid-column: 5 / 7;
+  grid-row: 60 / 90;
+}
+
+.mosaicGrid > .six{
+  grid-column: 4 / 7;
+  grid-row: 90 / 120;
+}
+.mosaicGrid > .seven{
+  grid-column: 1 / 4;
+  grid-row: 90 / 120;
+}
+.mosaicGrid > .eight{
+  grid-column: 1 / 7;
+  grid-row: 120 / 190;
+}
+.mosaicGrid > .nine{
+  grid-column: 4 / 7;
+  grid-row: 10 / 60;
+}
+}
+/*-------------------- END TABLET SIZING --------------------*/
+/*-------------------- BEGIN DESKTOP SIZING --------------------*/
+@media screen and (min-width: 1025px){
+  .greeting {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--mainFont);
+    padding-top: 2vh;
+    width: 100%;
+    padding-bottom: 2vh;
+    border-bottom: 1px solid rgb(191, 191, 191);
+  }
+
+  div > p {
+    font-size: 150%;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+  }
+
+  .greeting > p{
+    font-size: 200%;
+  }
+
+  div > p > span {
+    font-weight: 700;
+  }
+
+  div > .header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-bottom: 2vw;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  div > .header > .divider{
+    height: 0.5px;
+    background-color: black;
+    align-self: center;
+    margin-left: 2vw;
+  }
+  .stillWorks > .mosaicGrid {
+    width: 100%;
+    display: grid;
+    padding-bottom: 2vw;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: minmax(150px, auto);
+    grid-gap: 10px;
+  }
+
+  .mosaicGrid > div {
+    background: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mosaicGrid > .one{
+    grid-column: 1 / 3;
+    grid-row: 1 / 75;
+  }
+
+  .mosaicGrid > .two{
+    grid-column: 3 / 5;
+    grid-row: 1 / 25;
+  }
+
+  .mosaicGrid > .three{
+    grid-column: 5 / 7;
+    grid-row: 1 / 35;
+  }
+
+  .mosaicGrid > .four{
+    grid-column: 3 / 5;
+    grid-row: 25 / 75;
+  }
+
+  .mosaicGrid > .five{
+    grid-column: 5 / 7;
+    grid-row: 35 / 75;
+  }
+
+  .mosaicGrid > .six{
+    grid-column: 1 / 4;
+    grid-row: 75 / 150;
+  }
+  .mosaicGrid > .seven{
+    grid-column: 4 / 7;
+    grid-row: 75 / 130;
+  }
+  .mosaicGrid > .eight{
+    grid-column: 4 / 7;
+    grid-row: 130 / 200;
+  }
+  .mosaicGrid > .nine{
+    grid-column: 1 / 4;
+    grid-row: 150 / 200;
+  }
+
+  .vidEmbeds {
+    align-self: flex-start;
+    padding: 2vw;
+    width: 100%;
+  }
+
+  .vidEmbeds > .header > .divider{
+    margin-right: 2vw;
+    margin-left: 0vw;
+  }
+
+  .vidEmbeds > .header > p{
+    order: 2;
+  }
+}
+/*-------------------- END DESKTOP SIZING --------------------*/
+/*-------------------- BEGIN XL SIZING --------------------*/
+/*-------------------- END XL SIZING --------------------*/
