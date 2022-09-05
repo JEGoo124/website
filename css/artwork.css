@@ -527,7 +527,7 @@ div > .header > .divider {
 
   .mosaicGrid2 > .ten {
     grid-column: 1 / 3;
-    grid-row: 1 / 75; }
+    grid-row: 1 / 25; }
 
   .mosaicGrid2 > .eleven {
     grid-column: 3 / 5;
@@ -547,7 +547,7 @@ div > .header > .divider {
 
   .mosaicGrid2 > .fifteen {
     grid-column: 1 / 4;
-    grid-row: 75 / 150; }}
+    grid-row: 25 / 75; }}
 /*-------------------- END DESKTOP SIZING --------------------*/
 /*-------------------- BEGIN XL SIZING --------------------*/
 /*-------------------- END XL SIZING --------------------*/
