@@ -217,6 +217,8 @@ div > .header > .divider {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
+.vidEmbeds > iframe {
+  max-width: 100% }
 
 .graphicDesigns {
   -ms-flex-item-align: start;
@@ -309,6 +311,104 @@ div > .header > .divider {
   background-size: cover;
   background-repeat: no-repeat; }
 
+.webDesigns, .socialMedia {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2vw;
+  width: 100%; }
+
+.webDesigns > .mosaicGrid3, .socialMedia > .mosaicGrid4 {
+  width: 100%;
+  display: grid;
+  padding-bottom: 2vw;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: minmax(150px, auto);
+  grid-gap: 10px; }
+
+.mosaicGrid3 > .sixteen {
+  grid-column: 1 / 7;
+  grid-row: 150 / 180;
+  background-image: url("../imgs/sixteen.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+.mosaicGrid3 > .seventeen {
+  grid-column: 1 / 7;
+  grid-row: 150 / 180;
+  background-image: url("../imgs/seventeen.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+.mosaicGrid3 > .eighteen {
+  grid-column: 1 / 7;
+  grid-row: 150 / 180;
+  background-image: url("../imgs/eighteen.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+.mosaicGrid3 > .nineteen {
+  grid-column: 1 / 7;
+  grid-row: 150 / 180;
+  background-image: url("../imgs/nineteen.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+.mosaicGrid4 > .twenty {
+  grid-column: 1 / 7;
+  grid-row: 150 / 180;
+  background-image: url("../imgs/twenty.webp");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+.mosaicGrid4 > .twentyone {
+  grid-column: 1 / 7;
+  grid-row: 150 / 180;
+  background-image: url("../imgs/twentyone.webp");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+.mosaicGrid4 > .twentytwo {
+  grid-column: 1 / 7;
+  grid-row: 150 / 180;
+  background-image: url("../imgs/twentytwo.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+.mosaicGrid4 > .twentythree {
+  grid-column: 1 / 7;
+  grid-row: 150 / 180;
+  background-image: url("../imgs/twentythree.webp");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+.mosaicGrid4 > .twentyfour {
+  grid-column: 1 / 7;
+  grid-row: 150 / 180;
+  background-image: url("../imgs/twentyfour.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+.mosaicGrid4 > .twentyfive {
+  grid-column: 1 / 7;
+  grid-row: 150 / 180;
+  background-image: url("../imgs/twentyfive.webp");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
 /*-------------------- END MOBILE SIZING --------------------*/
 /*-------------------- BEGIN TABLET SIZING --------------------*/
 @media screen and (min-width: 724px) {
@@ -370,7 +470,45 @@ div > .header > .divider {
 
   .mosaicGrid2 > .fifteen {
     grid-column: 4 / 7;
-    grid-row: 10 / 60; }}
+    grid-row: 10 / 60; }
+  .mosaicGrid3 > .sixteen {
+    grid-column: 1 / 4;
+    grid-row: 10 / 45; }
+  .mosaicGrid3 > .seventeen {
+    grid-column: 5 / 7;
+    grid-row: 10 / 45; }
+  .mosaicGrid3 > .eighteen {
+    grid-column: 1 / 3;
+    grid-row: 10 / 45; }
+  .mosaicGrid3 > .nineteen {
+    grid-column: 4 / 7;
+    grid-row: 45 / 90; }
+
+  .mosaicGrid4 > .twenty {
+    grid-column: 1 / 4;
+    grid-row: 1 / 30; }
+
+  .mosaicGrid4 > .twentyone {
+    grid-column: 4 / 7;
+    grid-row: 1 / 10; }
+
+  .mosaicGrid4 > .twentytwo {
+    grid-column: 1 / 4;
+    grid-row: 30 / 60; }
+
+  .mosaicGrid4 > .twentythree {
+    grid-column: 1 / 5;
+    grid-row: 60 / 90; }
+
+  .mosaicGrid4 > .twnetyfour {
+    grid-column: 5 / 7;
+    grid-row: 60 / 90; }
+
+  .mosaicGrid4 > .twentyfive {
+    grid-column: 4 / 7;
+    grid-row: 10 / 60; }
+
+}
 /*-------------------- END TABLET SIZING --------------------*/
 /*-------------------- BEGIN DESKTOP SIZING --------------------*/
 @media screen and (min-width: 1025px) {
@@ -547,7 +685,72 @@ div > .header > .divider {
 
   .mosaicGrid2 > .fifteen {
     grid-column: 1 / 3;
-    grid-row: 25 / 75; }}
+    grid-row: 25 / 75; }
+
+  .webDesigns > .mosaicGrid3, .socialMedia > .mosaicGrid4 {
+    width: 100%;
+    display: grid;
+    padding-bottom: 2vw;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: minmax(150px, auto);
+    grid-gap: 10px; }
+
+  mosaicGrid3 > div, .mosaicGrid4 > div {
+    background: #333;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .webDesigns a:hover, social media a:hover {
+    transform: scale(.9);
+  }
+  .mosaicGrid3 > .sixteen {
+    grid-column: 1 / 4;
+    grid-row: 10 / 45; }
+  .mosaicGrid3 > .seventeen {
+    grid-column: 5 / 7;
+    grid-row: 10 / 45; }
+  .mosaicGrid3 > .eighteen {
+    grid-column: 1 / 3;
+    grid-row: 10 / 45; }
+  .mosaicGrid3 > .nineteen {
+    grid-column: 4 / 7;
+    grid-row: 45 / 90; }
+  .mosaicGrid4 > .twenty {
+    grid-column: 1 / 3;
+    grid-row: 1 / 25; }
+
+  .mosaicGrid4 > .twentyone {
+    grid-column: 3 / 5;
+    grid-row: 1 / 25; }
+
+  .mosaicGrid4 > .twentytwo {
+    grid-column: 5 / 7;
+    grid-row: 1 / 35; }
+
+  .mosaicGrid4 > .twentythree {
+    grid-column: 3 / 5;
+    grid-row: 25 / 75; }
+
+  .mosaicGrid4 > .twentyfour {
+    grid-column: 5 / 7;
+    grid-row: 35 / 75; }
+
+  .mosaicGrid4 > .twentyfive {
+    grid-column: 1 / 3;
+    grid-row: 25 / 75; }
+
+
+}
 /*-------------------- END DESKTOP SIZING --------------------*/
 /*-------------------- BEGIN XL SIZING --------------------*/
 /*-------------------- END XL SIZING --------------------*/
